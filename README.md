@@ -39,10 +39,10 @@ javac cli/ExperimentRunner.java algorithms/*.java metrics/*.java
 # Run benchmark suite
 java cli.ExperimentRunner 10000 output/benchmark.csv
 Observed Behavior
-MergeSort: Predictable Θ(n log n) runtime; slightly higher overhead due to buffer copying.
-QuickSort: Faster in practice due to better cache performance and fewer memory writes.
-Deterministic Select: Confirmed linear scaling, though with a high constant factor (~3–5× slower than randomized select).
-Closest Pair: Matches Θ(n log n) trend, but strip processing adds noticeable overhead for small n.
+- MergeSort: Predictable Θ(n log n) runtime; slightly higher overhead due to buffer copying.
+- QuickSort: Faster in practice due to better cache performance and fewer memory writes.
+- Deterministic Select: Confirmed linear scaling, though with a high constant factor (~3–5× slower than randomized select).
+- Closest Pair: Matches Θ(n log n) trend, but strip processing adds noticeable overhead for small n.
 Practical Performance Considerations
 Cache Locality: QuickSort’s sequential access pattern outperforms MergeSort on modern CPUs.
 Garbage Collection: MergeSort’s single buffer minimizes GC pressure compared to repeated allocations.

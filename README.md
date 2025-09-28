@@ -44,7 +44,7 @@ Observed Behavior
 - Deterministic Select: Confirmed linear scaling, though with a high constant factor (~3–5× slower than randomized select).
 - Closest Pair: Matches Θ(n log n) trend, but strip processing adds noticeable overhead for small n.
 Practical Performance Considerations
-Cache Locality: QuickSort’s sequential access pattern outperforms MergeSort on modern CPUs.
+# Cache Locality: QuickSort’s sequential access pattern outperforms MergeSort on modern CPUs.
 Garbage Collection: MergeSort’s single buffer minimizes GC pressure compared to repeated allocations.
 Branch Misprediction: Randomized QuickSort suffers less from unpredictable branching than naive variants.
 Benchmarking with JMH
